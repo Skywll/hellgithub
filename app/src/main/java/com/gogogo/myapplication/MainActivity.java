@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
                         .diskCacheStrategy(DiskCacheStrategy.NONE)
                         .into(viewById);
 
+
+
     }
 
     public void loadimage(View view) {
