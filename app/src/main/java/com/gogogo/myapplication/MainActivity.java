@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                         .error(R.drawable.error)
                         .diskCacheStrategy(DiskCacheStrategy.NONE)
                         .into(viewById);
+        System.out.println();
 
 
 
