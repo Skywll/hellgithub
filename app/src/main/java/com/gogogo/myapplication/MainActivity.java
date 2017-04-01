@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ImageView viewById = (ImageView) findViewById(R.id.iv);
 
+
         String url ="http://p1.pstatp.com/large/166200019850062839d3";
                 Glide.with(this)
                         .load(url)
