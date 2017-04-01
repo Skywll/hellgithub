@@ -12,22 +12,16 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 public class MainActivity extends AppCompatActivity {
 
 
+    private ImageView mImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView viewById = (ImageView) findViewById(R.id.iv);
+        mImageView = (ImageView) findViewById(R.id.iv);
 
 
-        String url ="http://p1.pstatp.com/large/166200019850062839d3";
-                Glide.with(this)
-                        .load(url)
-                        .asBitmap()
-                        .placeholder(R.mipmap.ic_launcher)
-                        .error(R.drawable.error)
-                        .diskCacheStrategy(DiskCacheStrategy.NONE)
-                        .into(viewById);
+
         System.out.println();
 
 
@@ -35,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadimage(View view) {
-
+        String url ="http://p1.pstatp.com/large/166200019850062839d3";
+        Glide.with(this)
+                .load(url)
+                .asBitmap()
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.drawable.error)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .into(mImageView);
     }
 }
